@@ -1,22 +1,18 @@
 zodiacs = {
-    2000 : "Dragon",
-    2001 : "Snake",
-    2002 : "Horse",
-    2003 : "Sheep",
-    2004 : "Monkey",
-    2005 : "Rooster",
-    2006 : "Dog",
-    2007 : "Pig",
-    2008 : "Rat",
-    2009 : "Ox",
-    2010 : "Tiger",
-    2011 : "Hare"
+    8 : "Dragon",
+    9 : "Snake",
+    10 : "Horse",
+    11 : "Sheep",
+    0 : "Monkey",
+    1 : "Rooster",
+    2 : "Dog",
+    3 : "Pig",
+    4 : "Rat",
+    5 : "Ox",
+    6 : "Tiger",
+    7 : "Hare"
 }
 
 year = int(input("Enter a year: "))
-while year < 2000 :
-    year = year + 12
 
-for user_year in zodiacs :
-    if year % user_year == 0 :
-       
+print(f"{year} is the year of the {zodiacs[year % 12]}.")
