@@ -5,7 +5,7 @@ look_up_table = dict(zip(wave_name, wavelength))
 print(look_up_table)
 
 {
-    # Wave : 
+    # Wave : wavelength(in meters)
     'Radio': 1, 
     'Microwave': 0.001, 
     'Infrared': 7.5e-07, 
