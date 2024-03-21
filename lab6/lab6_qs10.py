@@ -1,18 +1,19 @@
 expression = list(input("Enter an expression: "))
 pairs_counter = 0
 invalid_closing_bracket = False
-num_of_open_brackets = 0
+pending_opens = []
 
 for char in expression :
     if char == "(":
-        num_of_open_brackets += 1
-    elif char == ')' and num_of_open_brackets:
+        pending_opens.append(char)
+    elif char == ')' and (len(pending_opens) != 0):
         pairs_counter += 1
-        num_of_open_brackets -= 1
+        pending_opens.pop()
     elif char == ')':
         invalid_closing_bracket = True
+        break
 
-if invalid_closing_bracket or num_of_open_brackets:   
+if invalid_closing_bracket or len(pending_opens) != 0:   
     print("Incorrect.") 
 else :
     print("Correct.")
