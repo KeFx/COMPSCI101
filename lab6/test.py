@@ -1,8 +1,3 @@
-def my_function(food):
-  for x in food:
-    x = "no"
-
-fruits = ["apple", "banana", "cherry"]
-
-print(my_function(fruits))
-print(fruits)
+xs = [8, 23, 45]
+for idx, x in enumerate(xs):
+    print(idx, x)
