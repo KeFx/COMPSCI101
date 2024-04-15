@@ -1,2 +1,2 @@
-word = "abcde12345"
-print("g" not in word)
+word = "00"
+print(word.isnumeric())
