@@ -20,8 +20,8 @@ def win_with_diagonals(grid, player):
     return win_with_decreasing_diagonal(grid, player) or win_with_increasing_diagonal(grid, player)
 
 def win_with_increasing_diagonal(grid, player):
-    for slot_index_in_row, row in zip(range(0, len(grid[0])), grid):
-        if row[slot_index_in_row] != player:
+    for i in range(len(grid)):
+        if grid[i][i] != player:
             return False
     return True
 
