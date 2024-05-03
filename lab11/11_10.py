@@ -1,3 +1,22 @@
+def main():
+    grid = input("Please enter a string representing TicTacToe grid: ")
+    player1 = "X"
+    player2 = "O"
+
+    print("TicTacToe Grid:")
+    print()
+    print_grid(grid)
+    print()
+
+    print(f"Player {player1} has won: {check_win(grid, player1)}")
+    print(f"Player {player2} has won: {check_win(grid, player2)}")
+
+def print_grid(grid):
+    rows = []
+    for first_slot_in_row in range(0, len(grid), 3):
+        rows.append('|'.join(grid[first_slot_in_row:first_slot_in_row+3]))
+    print('\n-----\n'.join(rows))    
+
 def check_win(grid_as_string, player):
     grid = turn_grid_string_to_grid_array(grid_as_string)
     return win_with_rows(grid, player)\
@@ -50,10 +69,3 @@ def turn_grid_string_to_grid_array(grid_as_string):
         row = grid_as_string[first_slot_in_row:first_slot_in_row + 3]
         arrayed_grid.append(row)
     return arrayed_grid
-
-
-grid = "XOXOXOOOX"
-player1 = "X"
-player2 = "O"
-print(f"Player {player1} has won: {check_win(grid, player1)}")
-print(f"Player {player2} has won: {check_win(grid, player2)}")
