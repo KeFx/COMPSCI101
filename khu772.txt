@@ -1,0 +1,7 @@
+High Scores
+===========
+
+Ryu	2700
+Ken	1500
+Blanka	1200
+Zangief	1100

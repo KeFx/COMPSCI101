@@ -3,7 +3,6 @@ def create_frequency_chart_file(letter_frequencies):
 
     max_length = 0
     for letter in letter_frequencies:
-        
         if letter[1] + 1 > max_length:
             max_length = letter[1] + 1
 
